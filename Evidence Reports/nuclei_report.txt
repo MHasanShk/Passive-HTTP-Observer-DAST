@@ -1,0 +1,336 @@
+[cookies-without-httponly] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-httponly] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-httponly] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-httponly] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-secure] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-httponly] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-secure] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-secure] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-secure] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-httponly] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-httponly] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-httponly] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-secure] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-httponly] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-secure] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-httponly] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-httponly] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-httponly] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-secure] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-httponly] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-httponly] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-httponly] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-httponly] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-secure] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-secure] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-secure] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-secure] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-secure] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-secure] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-secure] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-secure] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[cookies-without-secure] [javascript] [info] webdriveruniversity.com ["nevercache-b39818"]
+[waf-detect:nginxgeneric] [http] [info] https://webdriveruniversity.com/Page-Object-Model/products.html
+[waf-detect:nginxgeneric] [http] [info] https://webdriveruniversity.com/Hidden-Elements/js/script.js
+[waf-detect:nginxgeneric] [http] [info] https://webdriveruniversity.com/Datepicker/js/bootstrap-datepicker.js
+[waf-detect:nginxgeneric] [http] [info] https://webdriveruniversity.com/Click-Buttons/js/script.js
+[waf-detect:nginxgeneric] [http] [info] https://webdriveruniversity.com/AI-Playground/index.html
+[waf-detect:nginxgeneric] [http] [info] https://webdriveruniversity.com/scottjehl/Respond/search
+[waf-detect:nginxgeneric] [http] [info] https://webdriveruniversity.com/search
+[waf-detect:nginxgeneric] [http] [info] https://webdriveruniversity.com/login
+[waf-detect:nginxgeneric] [http] [info] https://webdriveruniversity.com/js/bootstrap.js
+[waf-detect:nginxgeneric] [http] [info] https://webdriveruniversity.com/aFarkas/html5shiv/search
+[waf-detect:nginxgeneric] [http] [info] https://webdriveruniversity.com/js/html5shiv.js
+[waf-detect:nginxgeneric] [http] [info] https://webdriveruniversity.com/js/respond.js
+[waf-detect:nginxgeneric] [http] [info] https://webdriveruniversity.com/js/bootstrap.min.js
+[waf-detect:nginxgeneric] [http] [info] https://webdriveruniversity.com/js/jquery-ui.js
+[waf-detect:nginxgeneric] [http] [info] https://webdriveruniversity.com/opensearch.xml
+[waf-detect:nginxgeneric] [http] [info] https://webdriveruniversity.com/js/jquery.js
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls12"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls12"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls12"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls12"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls12"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls12"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls12"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls12"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls12"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls12"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls12"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls12"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls12"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls12"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls12"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls12"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls13"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls13"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls13"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls13"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls13"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls13"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls13"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls13"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls13"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls13"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls13"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls13"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls13"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls13"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls13"]
+[tls-version] [ssl] [info] webdriveruniversity.com:443 ["tls13"]
+[missing-cookie-samesite-strict] [http] [info] https://webdriveruniversity.com/Click-Buttons/js/script.js ["nevercache-b39818=Y;Max-Age=-1"]
+[missing-cookie-samesite-strict] [http] [info] https://webdriveruniversity.com/Page-Object-Model/products.html ["nevercache-b39818=Y;Max-Age=-1"]
+[missing-cookie-samesite-strict] [http] [info] https://webdriveruniversity.com/Datepicker/js/bootstrap-datepicker.js ["nevercache-b39818=Y;Max-Age=-1"]
+[missing-cookie-samesite-strict] [http] [info] https://webdriveruniversity.com/Hidden-Elements/js/script.js ["nevercache-b39818=Y;Max-Age=-1"]
+[missing-cookie-samesite-strict] [http] [info] https://webdriveruniversity.com/AI-Playground/index.html ["nevercache-b39818=Y;Max-Age=-1"]
+[tech-detect:nginx] [http] [info] https://webdriveruniversity.com/Click-Buttons/js/script.js
+[tech-detect:nginx] [http] [info] https://webdriveruniversity.com/Page-Object-Model/products.html
+[tech-detect:nginx] [http] [info] https://webdriveruniversity.com/Datepicker/js/bootstrap-datepicker.js
+[tech-detect:nginx] [http] [info] https://webdriveruniversity.com/AI-Playground/index.html
+[tech-detect:nginx] [http] [info] https://webdriveruniversity.com/Hidden-Elements/js/script.js
+[missing-cookie-samesite-strict] [http] [info] https://webdriveruniversity.com/search ["nevercache-b39818=Y;Max-Age=-1"]
+[missing-cookie-samesite-strict] [http] [info] https://webdriveruniversity.com/js/jquery-ui.js ["nevercache-b39818=Y;Max-Age=-1"]
+[missing-cookie-samesite-strict] [http] [info] https://webdriveruniversity.com/login ["nevercache-b39818=Y;Max-Age=-1"]
+[missing-cookie-samesite-strict] [http] [info] https://webdriveruniversity.com/opensearch.xml ["nevercache-b39818=Y;Max-Age=-1"]
+[missing-cookie-samesite-strict] [http] [info] https://webdriveruniversity.com/scottjehl/Respond/search ["nevercache-b39818=Y;Max-Age=-1"]
+[tech-detect:nginx] [http] [info] https://webdriveruniversity.com/search
+[missing-cookie-samesite-strict] [http] [info] https://webdriveruniversity.com/js/respond.js ["nevercache-b39818=Y;Max-Age=-1"]
+[missing-cookie-samesite-strict] [http] [info] https://webdriveruniversity.com/js/html5shiv.js ["nevercache-b39818=Y;Max-Age=-1"]
+[missing-cookie-samesite-strict] [http] [info] https://webdriveruniversity.com/js/bootstrap.js ["nevercache-b39818=Y;Max-Age=-1"]
+[missing-cookie-samesite-strict] [http] [info] https://webdriveruniversity.com/js/bootstrap.min.js ["nevercache-b39818=Y;Max-Age=-1"]
+[missing-cookie-samesite-strict] [http] [info] https://webdriveruniversity.com/aFarkas/html5shiv/search ["nevercache-b39818=Y;Max-Age=-1"]
+[missing-cookie-samesite-strict] [http] [info] https://webdriveruniversity.com/js/jquery.js ["nevercache-b39818=Y;Max-Age=-1"]
+[tech-detect:nginx] [http] [info] https://webdriveruniversity.com/js/jquery-ui.js
+[tech-detect:nginx] [http] [info] https://webdriveruniversity.com/login
+[tech-detect:nginx] [http] [info] https://webdriveruniversity.com/js/jquery.js
+[tech-detect:nginx] [http] [info] https://webdriveruniversity.com/js/html5shiv.js
+[tech-detect:nginx] [http] [info] https://webdriveruniversity.com/js/bootstrap.min.js
+[tech-detect:nginx] [http] [info] https://webdriveruniversity.com/js/respond.js
+[tech-detect:nginx] [http] [info] https://webdriveruniversity.com/aFarkas/html5shiv/search
+[tech-detect:nginx] [http] [info] https://webdriveruniversity.com/js/bootstrap.js
+[tech-detect:nginx] [http] [info] https://webdriveruniversity.com/scottjehl/Respond/search
+[tech-detect:nginx] [http] [info] https://webdriveruniversity.com/opensearch.xml
+[ssl-issuer] [ssl] [info] webdriveruniversity.com:443 ["Let's Encrypt"]
+[ssl-dns-names] [ssl] [info] webdriveruniversity.com:443 ["*.webdriveruniversity.com","webdriveruniversity.com"]
+[wildcard-tls] [ssl] [info] webdriveruniversity.com:443 ["SAN: [*.webdriveruniversity.com webdriveruniversity.com]","CN: *.webdriveruniversity.com"]
+[ssl-issuer] [ssl] [info] webdriveruniversity.com:443 ["Let's Encrypt"]
+[ssl-dns-names] [ssl] [info] webdriveruniversity.com:443 ["*.webdriveruniversity.com","webdriveruniversity.com"]
+[wildcard-tls] [ssl] [info] webdriveruniversity.com:443 ["CN: *.webdriveruniversity.com","SAN: [*.webdriveruniversity.com webdriveruniversity.com]"]
+[ssl-issuer] [ssl] [info] webdriveruniversity.com:443 ["Let's Encrypt"]
+[ssl-issuer] [ssl] [info] webdriveruniversity.com:443 ["Let's Encrypt"]
+[ssl-dns-names] [ssl] [info] webdriveruniversity.com:443 ["*.webdriveruniversity.com","webdriveruniversity.com"]
+[wildcard-tls] [ssl] [info] webdriveruniversity.com:443 ["CN: *.webdriveruniversity.com","SAN: [*.webdriveruniversity.com webdriveruniversity.com]"]
+[ssl-dns-names] [ssl] [info] webdriveruniversity.com:443 ["webdriveruniversity.com","*.webdriveruniversity.com"]
+[wildcard-tls] [ssl] [info] webdriveruniversity.com:443 ["CN: *.webdriveruniversity.com","SAN: [*.webdriveruniversity.com webdriveruniversity.com]"]
+[ssl-issuer] [ssl] [info] webdriveruniversity.com:443 ["Let's Encrypt"]
+[ssl-dns-names] [ssl] [info] webdriveruniversity.com:443 ["*.webdriveruniversity.com","webdriveruniversity.com"]
+[wildcard-tls] [ssl] [info] webdriveruniversity.com:443 ["CN: *.webdriveruniversity.com","SAN: [*.webdriveruniversity.com webdriveruniversity.com]"]
+[ssl-issuer] [ssl] [info] webdriveruniversity.com:443 ["Let's Encrypt"]
+[ssl-dns-names] [ssl] [info] webdriveruniversity.com:443 ["*.webdriveruniversity.com","webdriveruniversity.com"]
+[wildcard-tls] [ssl] [info] webdriveruniversity.com:443 ["CN: *.webdriveruniversity.com","SAN: [*.webdriveruniversity.com webdriveruniversity.com]"]
+[ssl-issuer] [ssl] [info] webdriveruniversity.com:443 ["Let's Encrypt"]
+[ssl-issuer] [ssl] [info] webdriveruniversity.com:443 ["Let's Encrypt"]
+[ssl-dns-names] [ssl] [info] webdriveruniversity.com:443 ["*.webdriveruniversity.com","webdriveruniversity.com"]
+[ssl-dns-names] [ssl] [info] webdriveruniversity.com:443 ["*.webdriveruniversity.com","webdriveruniversity.com"]
+[wildcard-tls] [ssl] [info] webdriveruniversity.com:443 ["CN: *.webdriveruniversity.com","SAN: [*.webdriveruniversity.com webdriveruniversity.com]"]
+[wildcard-tls] [ssl] [info] webdriveruniversity.com:443 ["CN: *.webdriveruniversity.com","SAN: [*.webdriveruniversity.com webdriveruniversity.com]"]
+[ssl-issuer] [ssl] [info] webdriveruniversity.com:443 ["Let's Encrypt"]
+[ssl-dns-names] [ssl] [info] webdriveruniversity.com:443 ["*.webdriveruniversity.com","webdriveruniversity.com"]
+[wildcard-tls] [ssl] [info] webdriveruniversity.com:443 ["CN: *.webdriveruniversity.com","SAN: [*.webdriveruniversity.com webdriveruniversity.com]"]
+[ssl-issuer] [ssl] [info] webdriveruniversity.com:443 ["Let's Encrypt"]
+[ssl-dns-names] [ssl] [info] webdriveruniversity.com:443 ["webdriveruniversity.com","*.webdriveruniversity.com"]
+[wildcard-tls] [ssl] [info] webdriveruniversity.com:443 ["CN: *.webdriveruniversity.com","SAN: [*.webdriveruniversity.com webdriveruniversity.com]"]
+[ssl-issuer] [ssl] [info] webdriveruniversity.com:443 ["Let's Encrypt"]
+[ssl-dns-names] [ssl] [info] webdriveruniversity.com:443 ["*.webdriveruniversity.com","webdriveruniversity.com"]
+[wildcard-tls] [ssl] [info] webdriveruniversity.com:443 ["CN: *.webdriveruniversity.com","SAN: [*.webdriveruniversity.com webdriveruniversity.com]"]
+[ssl-issuer] [ssl] [info] webdriveruniversity.com:443 ["Let's Encrypt"]
+[ssl-issuer] [ssl] [info] webdriveruniversity.com:443 ["Let's Encrypt"]
+[ssl-dns-names] [ssl] [info] webdriveruniversity.com:443 ["webdriveruniversity.com","*.webdriveruniversity.com"]
+[ssl-dns-names] [ssl] [info] webdriveruniversity.com:443 ["*.webdriveruniversity.com","webdriveruniversity.com"]
+[wildcard-tls] [ssl] [info] webdriveruniversity.com:443 ["CN: *.webdriveruniversity.com","SAN: [*.webdriveruniversity.com webdriveruniversity.com]"]
+[wildcard-tls] [ssl] [info] webdriveruniversity.com:443 ["CN: *.webdriveruniversity.com","SAN: [*.webdriveruniversity.com webdriveruniversity.com]"]
+[ssl-issuer] [ssl] [info] webdriveruniversity.com:443 ["Let's Encrypt"]
+[ssl-dns-names] [ssl] [info] webdriveruniversity.com:443 ["*.webdriveruniversity.com","webdriveruniversity.com"]
+[wildcard-tls] [ssl] [info] webdriveruniversity.com:443 ["CN: *.webdriveruniversity.com","SAN: [*.webdriveruniversity.com webdriveruniversity.com]"]
+[ssl-issuer] [ssl] [info] webdriveruniversity.com:443 ["Let's Encrypt"]
+[ssl-dns-names] [ssl] [info] webdriveruniversity.com:443 ["*.webdriveruniversity.com","webdriveruniversity.com"]
+[wildcard-tls] [ssl] [info] webdriveruniversity.com:443 ["CN: *.webdriveruniversity.com","SAN: [*.webdriveruniversity.com webdriveruniversity.com]"]
+[ssl-issuer] [ssl] [info] webdriveruniversity.com:443 ["Let's Encrypt"]
+[ssl-dns-names] [ssl] [info] webdriveruniversity.com:443 ["*.webdriveruniversity.com","webdriveruniversity.com"]
+[wildcard-tls] [ssl] [info] webdriveruniversity.com:443 ["CN: *.webdriveruniversity.com","SAN: [*.webdriveruniversity.com webdriveruniversity.com]"]
+[http-missing-security-headers:content-security-policy] [http] [info] https://webdriveruniversity.com/Page-Object-Model/products.html
+[http-missing-security-headers:x-frame-options] [http] [info] https://webdriveruniversity.com/Page-Object-Model/products.html
+[http-missing-security-headers:referrer-policy] [http] [info] https://webdriveruniversity.com/Page-Object-Model/products.html
+[http-missing-security-headers:clear-site-data] [http] [info] https://webdriveruniversity.com/Page-Object-Model/products.html
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] https://webdriveruniversity.com/Page-Object-Model/products.html
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] https://webdriveruniversity.com/Page-Object-Model/products.html
+[http-missing-security-headers:strict-transport-security] [http] [info] https://webdriveruniversity.com/Page-Object-Model/products.html
+[http-missing-security-headers:permissions-policy] [http] [info] https://webdriveruniversity.com/Page-Object-Model/products.html
+[http-missing-security-headers:x-content-type-options] [http] [info] https://webdriveruniversity.com/Page-Object-Model/products.html
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://webdriveruniversity.com/Page-Object-Model/products.html
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] https://webdriveruniversity.com/Page-Object-Model/products.html
+[http-missing-security-headers:strict-transport-security] [http] [info] https://webdriveruniversity.com/js/bootstrap.min.js
+[http-missing-security-headers:permissions-policy] [http] [info] https://webdriveruniversity.com/js/bootstrap.min.js
+[http-missing-security-headers:x-content-type-options] [http] [info] https://webdriveruniversity.com/js/bootstrap.min.js
+[http-missing-security-headers:referrer-policy] [http] [info] https://webdriveruniversity.com/js/bootstrap.min.js
+[http-missing-security-headers:clear-site-data] [http] [info] https://webdriveruniversity.com/js/bootstrap.min.js
+[http-missing-security-headers:content-security-policy] [http] [info] https://webdriveruniversity.com/js/bootstrap.min.js
+[http-missing-security-headers:x-frame-options] [http] [info] https://webdriveruniversity.com/js/bootstrap.min.js
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://webdriveruniversity.com/js/bootstrap.min.js
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] https://webdriveruniversity.com/js/bootstrap.min.js
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] https://webdriveruniversity.com/js/bootstrap.min.js
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] https://webdriveruniversity.com/js/bootstrap.min.js
+[http-missing-security-headers:permissions-policy] [http] [info] https://webdriveruniversity.com/AI-Playground/index.html
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://webdriveruniversity.com/AI-Playground/index.html
+[http-missing-security-headers:referrer-policy] [http] [info] https://webdriveruniversity.com/AI-Playground/index.html
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] https://webdriveruniversity.com/AI-Playground/index.html
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] https://webdriveruniversity.com/AI-Playground/index.html
+[http-missing-security-headers:strict-transport-security] [http] [info] https://webdriveruniversity.com/AI-Playground/index.html
+[http-missing-security-headers:content-security-policy] [http] [info] https://webdriveruniversity.com/AI-Playground/index.html
+[http-missing-security-headers:x-frame-options] [http] [info] https://webdriveruniversity.com/AI-Playground/index.html
+[http-missing-security-headers:x-content-type-options] [http] [info] https://webdriveruniversity.com/AI-Playground/index.html
+[http-missing-security-headers:clear-site-data] [http] [info] https://webdriveruniversity.com/AI-Playground/index.html
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] https://webdriveruniversity.com/AI-Playground/index.html
+[http-missing-security-headers:strict-transport-security] [http] [info] https://webdriveruniversity.com/js/bootstrap.js
+[http-missing-security-headers:permissions-policy] [http] [info] https://webdriveruniversity.com/js/bootstrap.js
+[http-missing-security-headers:x-frame-options] [http] [info] https://webdriveruniversity.com/js/bootstrap.js
+[http-missing-security-headers:x-content-type-options] [http] [info] https://webdriveruniversity.com/js/bootstrap.js
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] https://webdriveruniversity.com/js/bootstrap.js
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] https://webdriveruniversity.com/js/bootstrap.js
+[http-missing-security-headers:content-security-policy] [http] [info] https://webdriveruniversity.com/js/bootstrap.js
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://webdriveruniversity.com/js/bootstrap.js
+[http-missing-security-headers:referrer-policy] [http] [info] https://webdriveruniversity.com/js/bootstrap.js
+[http-missing-security-headers:clear-site-data] [http] [info] https://webdriveruniversity.com/js/bootstrap.js
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] https://webdriveruniversity.com/js/bootstrap.js
+[http-missing-security-headers:clear-site-data] [http] [info] https://webdriveruniversity.com/Hidden-Elements/js/script.js
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] https://webdriveruniversity.com/Hidden-Elements/js/script.js
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] https://webdriveruniversity.com/Hidden-Elements/js/script.js
+[http-missing-security-headers:permissions-policy] [http] [info] https://webdriveruniversity.com/Hidden-Elements/js/script.js
+[http-missing-security-headers:x-content-type-options] [http] [info] https://webdriveruniversity.com/Hidden-Elements/js/script.js
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] https://webdriveruniversity.com/Hidden-Elements/js/script.js
+[http-missing-security-headers:strict-transport-security] [http] [info] https://webdriveruniversity.com/Hidden-Elements/js/script.js
+[http-missing-security-headers:content-security-policy] [http] [info] https://webdriveruniversity.com/Hidden-Elements/js/script.js
+[http-missing-security-headers:x-frame-options] [http] [info] https://webdriveruniversity.com/Hidden-Elements/js/script.js
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://webdriveruniversity.com/Hidden-Elements/js/script.js
+[http-missing-security-headers:referrer-policy] [http] [info] https://webdriveruniversity.com/Hidden-Elements/js/script.js
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://webdriveruniversity.com/Datepicker/js/bootstrap-datepicker.js
+[http-missing-security-headers:referrer-policy] [http] [info] https://webdriveruniversity.com/Datepicker/js/bootstrap-datepicker.js
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] https://webdriveruniversity.com/Datepicker/js/bootstrap-datepicker.js
+[http-missing-security-headers:clear-site-data] [http] [info] https://webdriveruniversity.com/Datepicker/js/bootstrap-datepicker.js
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] https://webdriveruniversity.com/Datepicker/js/bootstrap-datepicker.js
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] https://webdriveruniversity.com/Datepicker/js/bootstrap-datepicker.js
+[http-missing-security-headers:strict-transport-security] [http] [info] https://webdriveruniversity.com/Datepicker/js/bootstrap-datepicker.js
+[http-missing-security-headers:content-security-policy] [http] [info] https://webdriveruniversity.com/Datepicker/js/bootstrap-datepicker.js
+[http-missing-security-headers:permissions-policy] [http] [info] https://webdriveruniversity.com/Datepicker/js/bootstrap-datepicker.js
+[http-missing-security-headers:x-frame-options] [http] [info] https://webdriveruniversity.com/Datepicker/js/bootstrap-datepicker.js
+[http-missing-security-headers:x-content-type-options] [http] [info] https://webdriveruniversity.com/Datepicker/js/bootstrap-datepicker.js
+[http-missing-security-headers:content-security-policy] [http] [info] https://webdriveruniversity.com/aFarkas/html5shiv/search
+[http-missing-security-headers:permissions-policy] [http] [info] https://webdriveruniversity.com/aFarkas/html5shiv/search
+[http-missing-security-headers:x-frame-options] [http] [info] https://webdriveruniversity.com/aFarkas/html5shiv/search
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://webdriveruniversity.com/aFarkas/html5shiv/search
+[http-missing-security-headers:clear-site-data] [http] [info] https://webdriveruniversity.com/aFarkas/html5shiv/search
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] https://webdriveruniversity.com/aFarkas/html5shiv/search
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] https://webdriveruniversity.com/aFarkas/html5shiv/search
+[http-missing-security-headers:strict-transport-security] [http] [info] https://webdriveruniversity.com/aFarkas/html5shiv/search
+[http-missing-security-headers:x-content-type-options] [http] [info] https://webdriveruniversity.com/aFarkas/html5shiv/search
+[http-missing-security-headers:referrer-policy] [http] [info] https://webdriveruniversity.com/aFarkas/html5shiv/search
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] https://webdriveruniversity.com/aFarkas/html5shiv/search
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] https://webdriveruniversity.com/Click-Buttons/js/script.js
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] https://webdriveruniversity.com/Click-Buttons/js/script.js
+[http-missing-security-headers:strict-transport-security] [http] [info] https://webdriveruniversity.com/Click-Buttons/js/script.js
+[http-missing-security-headers:x-frame-options] [http] [info] https://webdriveruniversity.com/Click-Buttons/js/script.js
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://webdriveruniversity.com/Click-Buttons/js/script.js
+[http-missing-security-headers:referrer-policy] [http] [info] https://webdriveruniversity.com/Click-Buttons/js/script.js
+[http-missing-security-headers:clear-site-data] [http] [info] https://webdriveruniversity.com/Click-Buttons/js/script.js
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] https://webdriveruniversity.com/Click-Buttons/js/script.js
+[http-missing-security-headers:content-security-policy] [http] [info] https://webdriveruniversity.com/Click-Buttons/js/script.js
+[http-missing-security-headers:permissions-policy] [http] [info] https://webdriveruniversity.com/Click-Buttons/js/script.js
+[http-missing-security-headers:x-content-type-options] [http] [info] https://webdriveruniversity.com/Click-Buttons/js/script.js
+[http-missing-security-headers:clear-site-data] [http] [info] https://webdriveruniversity.com/js/respond.js
+[http-missing-security-headers:permissions-policy] [http] [info] https://webdriveruniversity.com/js/respond.js
+[http-missing-security-headers:x-content-type-options] [http] [info] https://webdriveruniversity.com/js/respond.js
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] https://webdriveruniversity.com/js/respond.js
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] https://webdriveruniversity.com/js/respond.js
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] https://webdriveruniversity.com/js/respond.js
+[http-missing-security-headers:strict-transport-security] [http] [info] https://webdriveruniversity.com/js/respond.js
+[http-missing-security-headers:content-security-policy] [http] [info] https://webdriveruniversity.com/js/respond.js
+[http-missing-security-headers:x-frame-options] [http] [info] https://webdriveruniversity.com/js/respond.js
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://webdriveruniversity.com/js/respond.js
+[http-missing-security-headers:referrer-policy] [http] [info] https://webdriveruniversity.com/js/respond.js
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] https://webdriveruniversity.com/js/jquery-ui.js
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] https://webdriveruniversity.com/js/jquery-ui.js
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] https://webdriveruniversity.com/js/jquery-ui.js
+[http-missing-security-headers:strict-transport-security] [http] [info] https://webdriveruniversity.com/js/jquery-ui.js
+[http-missing-security-headers:content-security-policy] [http] [info] https://webdriveruniversity.com/js/jquery-ui.js
+[http-missing-security-headers:permissions-policy] [http] [info] https://webdriveruniversity.com/js/jquery-ui.js
+[http-missing-security-headers:referrer-policy] [http] [info] https://webdriveruniversity.com/js/jquery-ui.js
+[http-missing-security-headers:x-frame-options] [http] [info] https://webdriveruniversity.com/js/jquery-ui.js
+[http-missing-security-headers:x-content-type-options] [http] [info] https://webdriveruniversity.com/js/jquery-ui.js
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://webdriveruniversity.com/js/jquery-ui.js
+[http-missing-security-headers:clear-site-data] [http] [info] https://webdriveruniversity.com/js/jquery-ui.js
+[http-missing-security-headers:content-security-policy] [http] [info] https://webdriveruniversity.com/login
+[http-missing-security-headers:permissions-policy] [http] [info] https://webdriveruniversity.com/login
+[http-missing-security-headers:x-content-type-options] [http] [info] https://webdriveruniversity.com/login
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://webdriveruniversity.com/login
+[http-missing-security-headers:referrer-policy] [http] [info] https://webdriveruniversity.com/login
+[http-missing-security-headers:clear-site-data] [http] [info] https://webdriveruniversity.com/login
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] https://webdriveruniversity.com/login
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] https://webdriveruniversity.com/login
+[http-missing-security-headers:strict-transport-security] [http] [info] https://webdriveruniversity.com/login
+[http-missing-security-headers:x-frame-options] [http] [info] https://webdriveruniversity.com/login
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] https://webdriveruniversity.com/login
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://webdriveruniversity.com/js/jquery.js
+[http-missing-security-headers:referrer-policy] [http] [info] https://webdriveruniversity.com/js/jquery.js
+[http-missing-security-headers:clear-site-data] [http] [info] https://webdriveruniversity.com/js/jquery.js
+[http-missing-security-headers:content-security-policy] [http] [info] https://webdriveruniversity.com/js/jquery.js
+[http-missing-security-headers:strict-transport-security] [http] [info] https://webdriveruniversity.com/search
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] https://webdriveruniversity.com/js/jquery.js
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] https://webdriveruniversity.com/js/jquery.js
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] https://webdriveruniversity.com/js/jquery.js
+[http-missing-security-headers:strict-transport-security] [http] [info] https://webdriveruniversity.com/js/jquery.js
+[http-missing-security-headers:permissions-policy] [http] [info] https://webdriveruniversity.com/js/jquery.js
+[http-missing-security-headers:x-frame-options] [http] [info] https://webdriveruniversity.com/js/jquery.js
+[http-missing-security-headers:permissions-policy] [http] [info] https://webdriveruniversity.com/search
+[http-missing-security-headers:x-content-type-options] [http] [info] https://webdriveruniversity.com/search
+[http-missing-security-headers:x-content-type-options] [http] [info] https://webdriveruniversity.com/js/jquery.js
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://webdriveruniversity.com/search
+[http-missing-security-headers:clear-site-data] [http] [info] https://webdriveruniversity.com/search
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] https://webdriveruniversity.com/search
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] https://webdriveruniversity.com/search
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] https://webdriveruniversity.com/search
+[http-missing-security-headers:content-security-policy] [http] [info] https://webdriveruniversity.com/search
+[http-missing-security-headers:x-frame-options] [http] [info] https://webdriveruniversity.com/search
+[http-missing-security-headers:referrer-policy] [http] [info] https://webdriveruniversity.com/search
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] https://webdriveruniversity.com/js/html5shiv.js
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] https://webdriveruniversity.com/js/html5shiv.js
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] https://webdriveruniversity.com/js/html5shiv.js
+[http-missing-security-headers:strict-transport-security] [http] [info] https://webdriveruniversity.com/js/html5shiv.js
+[http-missing-security-headers:x-frame-options] [http] [info] https://webdriveruniversity.com/js/html5shiv.js
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://webdriveruniversity.com/js/html5shiv.js
+[http-missing-security-headers:content-security-policy] [http] [info] https://webdriveruniversity.com/js/html5shiv.js
+[http-missing-security-headers:permissions-policy] [http] [info] https://webdriveruniversity.com/js/html5shiv.js
+[http-missing-security-headers:x-content-type-options] [http] [info] https://webdriveruniversity.com/js/html5shiv.js
+[http-missing-security-headers:referrer-policy] [http] [info] https://webdriveruniversity.com/js/html5shiv.js
+[http-missing-security-headers:clear-site-data] [http] [info] https://webdriveruniversity.com/js/html5shiv.js
+[http-missing-security-headers:referrer-policy] [http] [info] https://webdriveruniversity.com/scottjehl/Respond/search
+[http-missing-security-headers:clear-site-data] [http] [info] https://webdriveruniversity.com/scottjehl/Respond/search
+[http-missing-security-headers:permissions-policy] [http] [info] https://webdriveruniversity.com/scottjehl/Respond/search
+[http-missing-security-headers:x-frame-options] [http] [info] https://webdriveruniversity.com/scottjehl/Respond/search
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] https://webdriveruniversity.com/scottjehl/Respond/search
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] https://webdriveruniversity.com/scottjehl/Respond/search
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] https://webdriveruniversity.com/scottjehl/Respond/search
+[http-missing-security-headers:strict-transport-security] [http] [info] https://webdriveruniversity.com/scottjehl/Respond/search
+[http-missing-security-headers:content-security-policy] [http] [info] https://webdriveruniversity.com/scottjehl/Respond/search
+[http-missing-security-headers:x-content-type-options] [http] [info] https://webdriveruniversity.com/scottjehl/Respond/search
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://webdriveruniversity.com/scottjehl/Respond/search
+[http-missing-security-headers:x-frame-options] [http] [info] https://webdriveruniversity.com/opensearch.xml
+[http-missing-security-headers:x-content-type-options] [http] [info] https://webdriveruniversity.com/opensearch.xml
+[http-missing-security-headers:x-permitted-cross-domain-policies] [http] [info] https://webdriveruniversity.com/opensearch.xml
+[http-missing-security-headers:referrer-policy] [http] [info] https://webdriveruniversity.com/opensearch.xml
+[http-missing-security-headers:cross-origin-embedder-policy] [http] [info] https://webdriveruniversity.com/opensearch.xml
+[http-missing-security-headers:cross-origin-resource-policy] [http] [info] https://webdriveruniversity.com/opensearch.xml
+[http-missing-security-headers:strict-transport-security] [http] [info] https://webdriveruniversity.com/opensearch.xml
+[http-missing-security-headers:content-security-policy] [http] [info] https://webdriveruniversity.com/opensearch.xml
+[http-missing-security-headers:permissions-policy] [http] [info] https://webdriveruniversity.com/opensearch.xml
+[http-missing-security-headers:clear-site-data] [http] [info] https://webdriveruniversity.com/opensearch.xml
+[http-missing-security-headers:cross-origin-opener-policy] [http] [info] https://webdriveruniversity.com/opensearch.xml

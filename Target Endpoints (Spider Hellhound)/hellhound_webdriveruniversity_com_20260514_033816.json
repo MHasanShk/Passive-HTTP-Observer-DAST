@@ -1,0 +1,1286 @@
+{
+  "meta": {
+    "tool": "Hellhound Spider v12.3",
+    "target": "https://webdriveruniversity.com/"
+  },
+  "summary": {
+    "total_endpoints": 40,
+    "confirmed": 1,
+    "high": 7,
+    "auth_required": 0,
+    "parameter_sensitive": 0,
+    "secrets": 0,
+    "cors_issues": 0,
+    "graphql_exposed": 0,
+    "openapi_exposed": 0,
+    "sourcemaps_exposed": 0,
+    "tech_stack": [],
+    "admin_panels": 0,
+    "auth_endpoints": 2,
+    "upload_endpoints": 2,
+    "idor_candidates": 0,
+    "sqli_candidates": 0,
+    "cmdi_candidates": 0,
+    "extracted_data": 0,
+    "robots_disallowed": 0,
+    "screenshots": 0
+  },
+  "endpoints": [
+    {
+      "url": "https://webdriveruniversity.com/",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(Seed)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/index.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/To-Do-List/index.html",
+      "method": "GET",
+      "confidence": "LOW",
+      "confidence_score": 1,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "Blocked_Response"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Ajax-Loader/index.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Contact-Us/contactus.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "javascript:void(0);",
+      "method": "POST",
+      "confidence": "MEDIUM",
+      "confidence_score": 6,
+      "observed_status": [],
+      "params": [
+        "email",
+        "first_name",
+        "last_name",
+        "message"
+      ],
+      "params_detail": {
+        "query": [],
+        "form": [
+          "first_name",
+          "last_name",
+          "email",
+          "message"
+        ],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "Form"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Login-Portal/index.html",
+      "method": "GET",
+      "confidence": "LOW",
+      "confidence_score": 1,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "Blocked_Response"
+      ],
+      "admin_panel": false,
+      "auth_classification": [
+        "login"
+      ],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Click-Buttons/index.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Page-Object-Model/index.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Accordion/index.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html",
+      "method": "POST",
+      "confidence": "CONFIRMED",
+      "confidence_score": 10,
+      "observed_status": [],
+      "params": [
+        "color",
+        "vegetable"
+      ],
+      "params_detail": {
+        "query": [],
+        "form": [
+          "color",
+          "vegetable"
+        ],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "Form"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Scrolling/index.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Actions/index.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Popup-Alerts/index.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/IFrame/index.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Hidden-Elements/index.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Data-Table/index.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Data-Table/index.html",
+      "method": "POST",
+      "confidence": "MEDIUM",
+      "confidence_score": 6,
+      "observed_status": [],
+      "params": [
+        "firstname",
+        "lastname"
+      ],
+      "params_detail": {
+        "query": [],
+        "form": [
+          "firstname",
+          "lastname"
+        ],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "Form"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Autocomplete-TextField/autocomplete-textfield.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Autocomplete-TextField/autocomplete-textfield.html",
+      "method": "POST",
+      "confidence": "MEDIUM",
+      "confidence_score": 6,
+      "observed_status": [],
+      "params": [
+        "food-item"
+      ],
+      "params_detail": {
+        "query": [],
+        "form": [
+          "food-item"
+        ],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "Form"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/File-Upload/index.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": true,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/File-Upload/index.html",
+      "method": "POST",
+      "confidence": "MEDIUM",
+      "confidence_score": 6,
+      "observed_status": [],
+      "params": [
+        "filename"
+      ],
+      "params_detail": {
+        "query": [],
+        "form": [
+          "filename"
+        ],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "Form"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": true,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Datepicker/index.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/AI-Playground/index.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/js/html5shiv.js",
+      "method": "GET",
+      "confidence": "LOW",
+      "confidence_score": 1,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "JS_File"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/opensearch.xml",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 6,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "JS_Analysis"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/login",
+      "method": "GET",
+      "confidence": "HIGH",
+      "confidence_score": 7,
+      "observed_status": [],
+      "params": [
+        "return_to"
+      ],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [
+          "return_to"
+        ],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "JS_Analysis"
+      ],
+      "admin_panel": false,
+      "auth_classification": [
+        "login"
+      ],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/aFarkas/html5shiv/search",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "JS_Analysis"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/search",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 6,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "JS_Analysis"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/js/respond.js",
+      "method": "GET",
+      "confidence": "LOW",
+      "confidence_score": 1,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "JS_File"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/scottjehl/Respond/search",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "JS_Analysis"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/js/jquery.js",
+      "method": "GET",
+      "confidence": "LOW",
+      "confidence_score": 1,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "JS_File"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/js/bootstrap.js",
+      "method": "GET",
+      "confidence": "LOW",
+      "confidence_score": 1,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "JS_File"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/js/jquery-ui.js",
+      "method": "GET",
+      "confidence": "LOW",
+      "confidence_score": 1,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "JS_File"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/js/bootstrap.min.js",
+      "method": "GET",
+      "confidence": "LOW",
+      "confidence_score": 1,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "JS_File"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Click-Buttons/js/script.js",
+      "method": "GET",
+      "confidence": "LOW",
+      "confidence_score": 1,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "JS_File"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Page-Object-Model/products.html",
+      "method": "GET",
+      "confidence": "MEDIUM",
+      "confidence_score": 3,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "HTML(HTML_Link)"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Hidden-Elements/js/script.js",
+      "method": "GET",
+      "confidence": "LOW",
+      "confidence_score": 1,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "JS_File"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    },
+    {
+      "url": "https://webdriveruniversity.com/Datepicker/js/bootstrap-datepicker.js",
+      "method": "GET",
+      "confidence": "LOW",
+      "confidence_score": 1,
+      "observed_status": [],
+      "params": [],
+      "params_detail": {
+        "query": [],
+        "form": [],
+        "js": [],
+        "openapi": [],
+        "runtime": []
+      },
+      "auth_required": false,
+      "source": [
+        "JS_File"
+      ],
+      "admin_panel": false,
+      "auth_classification": [],
+      "file_upload_candidate": false,
+      "idor_candidate": false,
+      "idor_signals": {},
+      "sqli_candidate": false,
+      "sqli_params": [],
+      "cmdi_candidate": false,
+      "cmdi_params": [],
+      "screenshot": null
+    }
+  ],
+  "secrets": [],
+  "cors_issues": [],
+  "graphql": [],
+  "openapi": [],
+  "sourcemaps": [],
+  "comments": [
+    {
+      "content": "/.container",
+      "source": "https://webdriveruniversity.com/Contact-Us/contactus.html"
+    },
+    {
+      "content": "5. Disabled-After-Click Button",
+      "source": "https://webdriveruniversity.com/AI-Playground/index.html"
+    },
+    {
+      "content": "9. Hidden Then Visible Element",
+      "source": "https://webdriveruniversity.com/AI-Playground/index.html"
+    },
+    {
+      "content": "/grid 1\u20139",
+      "source": "https://webdriveruniversity.com/AI-Playground/index.html"
+    },
+    {
+      "content": "/grid core",
+      "source": "https://webdriveruniversity.com/AI-Playground/index.html"
+    },
+    {
+      "content": "SECTION: Debugging Traps",
+      "source": "https://webdriveruniversity.com/AI-Playground/index.html"
+    },
+    {
+      "content": "/grid debugging",
+      "source": "https://webdriveruniversity.com/AI-Playground/index.html"
+    },
+    {
+      "content": "/grid refactor",
+      "source": "https://webdriveruniversity.com/AI-Playground/index.html"
+    },
+    {
+      "content": "/grid advanced",
+      "source": "https://webdriveruniversity.com/AI-Playground/index.html"
+    },
+    {
+      "content": "/capstone card",
+      "source": "https://webdriveruniversity.com/AI-Playground/index.html"
+    },
+    {
+      "content": "/capstone grid",
+      "source": "https://webdriveruniversity.com/AI-Playground/index.html"
+    },
+    {
+      "content": "/wrap",
+      "source": "https://webdriveruniversity.com/AI-Playground/index.html"
+    }
+  ],
+  "robots_disallowed": [],
+  "tech_stack": [],
+  "extracted_data": []
+}
