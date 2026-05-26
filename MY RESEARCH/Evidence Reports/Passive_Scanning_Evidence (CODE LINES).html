@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passive HTTP Observer v9.3 | Evidence of Passive Scanning Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Fira Code', 'SF Mono', 'Cascadia Code', monospace;
+            background: #0d1117;
+            color: #e6edf3;
+            line-height: 1.5;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #161b22;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+            overflow: hidden;
+            border: 1px solid #30363d;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #0a0c10 0%, #1a1f2e 100%);
+            padding: 2rem 2.5rem;
+            border-bottom: 3px solid #2f81f7;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            letter-spacing: -0.5px;
+            background: linear-gradient(120deg, #ffffff, #7ac5ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-container {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        .badge {
+            background: #21262d;
+            padding: 0.25rem 0.85rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border: 1px solid #30363d;
+            font-family: monospace;
+        }
+
+        .badge.passive {
+            background: #1f3b2c;
+            color: #7ee787;
+            border-color: #2ea043;
+        }
+
+        /* Navigation Tabs */
+        .tabs {
+            display: flex;
+            background: #0d1117;
+            border-bottom: 1px solid #30363d;
+            padding: 0 1.5rem;
+            gap: 0.25rem;
+        }
+
+        .tab {
+            padding: 0.9rem 1.6rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: default;
+            background: transparent;
+            border: none;
+            color: #8b949e;
+            font-family: monospace;
+            transition: all 0.1s;
+        }
+
+        .tab.active {
+            color: #2f81f7;
+            border-bottom: 2px solid #2f81f7;
+            background: #161b22;
+        }
+
+        /* Main content */
+        .content {
+            padding: 2rem 2.5rem;
+        }
+
+        /* Evidence cards */
+        .evidence-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+        }
+
+        .evidence-card {
+            background: #0d1117;
+            border-radius: 18px;
+            border: 1px solid #21262d;
+            overflow: hidden;
+            transition: transform 0.1s ease;
+        }
+
+        .evidence-card:hover {
+            border-color: #2f81f7;
+            box-shadow: 0 4px 12px rgba(47,129,247,0.1);
+        }
+
+        .card-header {
+            background: #161b22;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #21262d;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .card-header .line-ref {
+            background: #21262d;
+            font-family: monospace;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: #7ee787;
+        }
+
+        .card-header h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #f0f6fc;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .code-snippet {
+            background: #010409;
+            border-radius: 12px;
+            padding: 1rem;
+            font-family: 'Fira Code', 'Cascadia Code', monospace;
+            font-size: 0.8rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            border-left: 4px solid #2f81f7;
+            margin: 1rem 0;
+            color: #c9d1d9;
+        }
+
+        .evidence-explanation {
+            background: #161b22;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 0.75rem;
+            border-left: 3px solid #e3b341;
+        }
+
+        .flag {
+            background: #2f81f733;
+            color: #7ac5ff;
+            font-weight: bold;
+            padding: 0.1rem 0.4rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-family: monospace;
+        }
+
+        hr {
+            border-color: #21262d;
+            margin: 1rem 0;
+        }
+
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-box {
+            background: #0d1117;
+            border-radius: 16px;
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid #21262d;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2f81f7;
+        }
+
+        .footer {
+            background: #0d1117;
+            border-top: 1px solid #21262d;
+            padding: 1.2rem 2rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #8b949e;
+        }
+        .keyword-highlight {
+            background: #2d2a1e;
+            color: #ffd966;
+            padding: 0.1rem 0.3rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🔍 Passive HTTP Observer · Forensic Evidence Report</h1>
+        <div style="font-size: 0.9rem; color: #8b949e; margin-top: 0.3rem;">Comprehensive security analysis tool — PASSIVE scanning mode analysis</div>
+        <div class="badge-container">
+            <span class="badge passive">🛡️ PASSIVE SCANNING</span>
+            <span class="badge">🚫 No active exploitation</span>
+            <span class="badge">📡 No payload injection</span>
+            <span class="badge">⚡ Rate-limited GET requests only</span>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <div class="tab active">📜 Evidence of Passive Nature</div>
+        <div class="tab">⚙️ Configuration Flags</div>
+        <div class="tab">🧠 Design Philosophy</div>
+    </div>
+
+    <div class="content">
+        <div class="summary-stats">
+            <div class="stat-box"><div class="stat-number">12+</div><div>Direct code artifacts</div><span style="font-size:0.7rem;">proving passive analysis</span></div>
+            <div class="stat-box"><div class="stat-number">✓</div><div>No active exploit generation</div><span style="font-size:0.7rem;">No POST/PUT modification</span></div>
+            <div class="stat-box"><div class="stat-number">♻️</div><div>Pre-fetched responses</div><span style="font-size:0.7rem;">HAR, PCAP, Burp XML</span></div>
+            <div class="stat-box"><div class="stat-number">🐢</div><div>Rate limiting + passive throttle</div><span style="font-size:0.7rem;">Respectful scanning</span></div>
+        </div>
+
+        <div class="evidence-grid">
+            <!-- EVIDENCE 1: passive_scanning configuration flag -->
+            <div class="evidence-card">
+                <div class="card-header">
+                    <span class="line-ref">📌 Lines 353-355</span>
+                    <h2>🔘 PASSIVE_SCANNING CONFIGURATION FLAG</h2>
+                </div>
+                <div class="card-body">
+                    <div class="code-snippet">
+                        # ObserverConfig class (lines 353–355) <br>
+                        <span class="keyword-highlight">passive_scanning: bool = True</span><br>
+                        passive_rate_limit: float = 1.0
+                    </div>
+                    <div class="evidence-explanation">
+                        <strong>📌 Evidence: </strong>Explicit configuration flag <code>passive_scanning = True</code> enforces non-intrusive behavior. <br>
+                        The tool is explicitly designed to operate in passive mode, preventing active probing by default.  
+                        This architectural decision ensures that the observer never sends malformed or malicious payloads.
+                    </div>
+                </div>
+            </div>
+
+            <!-- EVIDENCE 2: rate_limit_passive method -->
+            <div class="evidence-card">
+                <div class="card-header">
+                    <span class="line-ref">📌 Lines 1063–1071</span>
+                    <h2>⏱️ _rate_limit_passive() – Polite scanning throttle</h2>
+                </div>
+                <div class="card-body">
+                    <div class="code-snippet">
+                        def _rate_limit_passive(self):<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;if self.config.passive_scanning and self.config.passive_rate_limit > 0:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with self.rate_limit_semaphore:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elapsed = time.time() - self.last_request_time<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if elapsed < self.config.passive_rate_limit:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time.sleep(self.config.passive_rate_limit - elapsed)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.last_request_time = time.time()
+                    </div>
+                    <div class="evidence-explanation">
+                        ✅ <strong>Passive evidence:</strong> The method introduces a deliberate <strong>delay between requests</strong> (1 second default) — 
+                        a hallmark of passive scanning to avoid overwhelming servers and to remain unaggressive. <br>
+                        This behavior is not typical of active scanners, which send bursts of requests.
+                    </div>
+                </div>
+            </div>
+
+            <!-- EVIDENCE 3: Pre-fetched responses instead of active injection -->
+            <div class="evidence-card">
+                <div class="card-header">
+                    <span class="line-ref">📌 Lines 1081 & 1087</span>
+                    <h2>📦 accept pre_fetched_response parameter</h2>
+                </div>
+                <div class="card-body">
+                    <div class="code-snippet">
+                        def analyze_endpoint(self, url: str, <span class="keyword-highlight">pre_fetched_response: requests.Response = None</span>) -> List[SecurityFinding]:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;if pre_fetched_response:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response = pre_fetched_response  <span class="flag"># ← passive: uses existing traffic</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response = self._make_passive_request(url)
+                    </div>
+                    <div class="evidence-explanation">
+                        💡 <strong>Core passive evidence:</strong> The analyzer explicitly supports <strong>pre-fetched responses</strong> from PCAP, HAR, or Burp exports.<br>
+                        This means the tool does NOT rely on generating custom attack requests. Instead, it <strong>observes existing HTTP traffic</strong> — 
+                        a textbook definition of passive analysis. Even when fetching live URLs, it uses standard GET with no fuzzing.
+                    </div>
+                </div>
+            </div>
+
+            <!-- EVIDENCE 4: _make_passive_request rate-limited GET -->
+            <div class="evidence-card">
+                <div class="card-header">
+                    <span class="line-ref">📌 Lines 1073–1080</span>
+                    <h2>🌐 _make_passive_request: Only standard GET with rate limit</h2>
+                </div>
+                <div class="card-body">
+                    <div class="code-snippet">
+                        def _make_passive_request(self, url: str) -> requests.Response:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;self._rate_limit_passive()<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;self.request_count += 1<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;return self.session.get(url, timeout=self.config.timeout, allow_redirects=True)
+                    </div>
+                    <div class="evidence-explanation">
+                        🔍 <strong>Passive indicator:</strong> The only HTTP method used is <code>GET</code>. No POST, PUT, DELETE, PATCH, or parameter fuzzing payloads.  
+                        No injection headers, no SQLi probes, no XSS payloads. The tool behaves exactly like a normal browser or crawler, ensuring non-intrusive observation.
+                    </div>
+                </div>
+            </div>
+
+            <!-- EVIDENCE 5: detection purely by regex, pattern matching, header analysis -->
+            <div class="evidence-card">
+                <div class="card-header">
+                    <span class="line-ref">📌 Lines 1579–1630 (JWT, GraphQL etc)</span>
+                    <h2>🧩 Detection methods: only static analysis, no active probes</h2>
+                </div>
+                <div class="card-body">
+                    <div class="code-snippet">
+                        # GraphQL introspection detector: looks for existing JSON patterns<br>
+                        introspection_patterns = [ r'"__schema"\s*:', r'"__typename"\s*:' ]<br>
+                        # JWT analyzer: scans JWT tokens in existing responses (no forced token generation)<br>
+                        jwt_pattern = re.compile(r'eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+')
+                    </div>
+                    <div class="evidence-explanation">
+                        📖 All detection mechanisms rely on <strong>pre-existing data</strong> from the response body, headers, cookies, or JavaScript content.  
+                        No active GraphQL introspection query is sent; instead the tool checks if the server already leaked schema.  
+                        Similarly, request smuggling & cache poisoning checks only analyze header combinations observed in <strong>existing traffic</strong>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- EVIDENCE 6: PCAP stream reassembly reads existing packets only -->
+            <div class="evidence-card">
+                <div class="card-header">
+                    <span class="line-ref">📌 Lines 574–647</span>
+                    <h2>📁 EnhancedPCAPProcessor: purely offline reassembly</h2>
+                </div>
+                <div class="card-body">
+                    <div class="code-snippet">
+                        with PcapReader(filepath) as pcap_reader:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;for packet in pcap_reader:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if TCP in packet and Raw in packet:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self._process_tcp_packet(packet)  # reassembly only<br>
+                        # final extraction of HTTP transactions without sending any new packet
+                    </div>
+                    <div class="evidence-explanation">
+                        🛜 <strong>Passive golden evidence:</strong> The PCAP module does not inject, replay, or modify packets. It simply reads stored capture files (pcap/pcapng)  
+                        and reassembles TCP streams to reconstruct HTTP conversations. The tool never generates outbound network packets from pcap data.  
+                        This is purely <strong>offline passive analysis</strong>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- EVIDENCE 7: HAR/Burp XML imports - passive ingestion -->
+            <div class="evidence-card">
+                <div class="card-header">
+                    <span class="line-ref">📌 Lines 1645–1676 & 1679–1730</span>
+                    <h2>📥 HAR & Burp XML parser: loads existing HTTP interactions</h2>
+                </div>
+                <div class="card-body">
+                    <div class="code-snippet">
+                        def parse_har_file(filepath: str, config: ObserverConfig):<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;har_data = json.load(f)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;entries = har_data.get('log', {}).get('entries', [])<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;# Build mock responses from saved data — NO new requests
+                    </div>
+                    <div class="evidence-explanation">
+                        ✅ HAR (HTTP Archive) and Burp XML files are parsed to reconstruct <strong>already recorded traffic</strong>.  
+                        This is the epitome of "passive" – the tool never contacts the target during analysis of these files.  
+                        The observer works as a forensic analyzer rather than a live scanner.
+                    </div>
+                </div>
+            </div>
+
+            <!-- EVIDENCE 8: Missing active payloads / fuzzing configuration -->
+            <div class="evidence-card">
+                <div class="card-header">
+                    <span class="line-ref">📌 ObserverConfig class (lines 297–356)</span>
+                    <h2>🚫 Absence of active probing modules</h2>
+                </div>
+                <div class="card-body">
+                    <div class="code-snippet">
+                        # Config parameters:<br>
+                        enable_heuristic_analysis: bool = True<br>
+                        enable_context_validation: bool = True<br>
+                        # NO 'active_fuzzing', NO 'payloads', NO 'exploit'
+                    </div>
+                    <div class="evidence-explanation">
+                        The configuration class has <strong>zero</strong> fields that relate to active exploitation (e.g. `fuzz_strings`, `sql_payloads`, `xss_vectors`).  
+                        Instead it includes passive detection flags like `detect_stack_traces`, `detect_graphql_introspection`.  
+                        This highlights the developer's intent: the tool only observes, never attacks.
+                    </div>
+                </div>
+            </div>
+
+            <!-- EVIDENCE 9: Error leakage detection only reads existing errors -->
+            <div class="evidence-card">
+                <div class="card-header">
+                    <span class="line-ref">📌 Lines 1450–1510</span>
+                    <h2>🐞 ErrorInformationLeakageDetector - passive evaluation</h2>
+                </div>
+                <div class="card-body">
+                    <div class="code-snippet">
+                        def analyze(self, url: str, response: requests.Response):<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;if not hasattr(response, 'text'): return []<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;# check stack trace patterns in the existing response body<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;patterns = [r'Traceback', r'File ".+", line \\d+']
+                    </div>
+                    <div class="evidence-explanation">
+                        No active error generation is performed. The tool does not send malformed input to trigger debug mode.  
+                        Instead, it <strong>passively examines</strong> responses for existing stack traces, SQL errors, and debug messages.  
+                        This again aligns with the Passive Observer methodology.
+                    </div>
+                </div>
+            </div>
+
+            <!-- EVIDENCE 10: Mixed content detector reads HTML, no resource fetching -->
+            <div class="evidence-card">
+                <div class="card-header">
+                    <span class="line-ref">📌 Lines 1326–1353</span>
+                    <h2>🔄 Mixed content passive analysis: Regex over HTML body</h2>
+                </div>
+                <div class="card-body">
+                    <div class="code-snippet">
+                        patterns = {<br>
+                            'script': re.compile(r'&lt;script[^&gt;]*src=["\'](https?://[^"\']+)', ...),<br>
+                            'image': re.compile(r'&lt;img[^&gt;]*src=["\'](https?://[^"\']+)', ...)<br>
+                        }<br>
+                        # no active HTTP requests to check resource availability
+                    </div>
+                    <div class="evidence-explanation">
+                        Mixed content detection does <strong>not</strong> attempt to fetch the HTTP resources; it only extracts URLs from the HTML source.  
+                        This is a passive inspection — merely reporting what is declared in the document without interacting with external domains.
+                    </div>
+                </div>
+            </div>
+
+            <!-- EVIDENCE 11: WebSocket analysis only handshake inspection -->
+            <div class="evidence-card">
+                <div class="card-header">
+                    <span class="line-ref">📌 Lines 1020–1040</span>
+                    <h2>🔌 WebSocketAnalyzer: only examines existing upgrade headers</h2>
+                </div>
+                <div class="card-body">
+                    <div class="code-snippet">
+                        def analyze_websocket_upgrade(self, request_headers, response_headers, url):<br>
+                            origin = request_headers.get('Origin', '')<br>
+                            if origin == '*' or origin == 'null': ...<br>
+                            # no attempt to establish actual WebSocket connection
+                    </div>
+                    <div class="evidence-explanation">
+                        The WebSocket module does not open a live WebSocket connection. It passively reviews headers from existing HTTP upgrade requests.  
+                        This strictly avoids active WebSocket handshake or message injection.
+                    </div>
+                </div>
+            </div>
+
+            <!-- EVIDENCE 12: rate limit & passive scanning docstring -->
+            <div class="evidence-card">
+                <div class="card-header">
+                    <span class="line-ref">📌 Lines 110–114 & 359-361</span>
+                    <h2>📃 Documentation & Metadata confirms Passive mode</h2>
+                </div>
+                <div class="card-body">
+                    <div class="code-snippet">
+                        # Passive scanning mode<br>
+                        passive_scanning: bool = True<br>
+                        passive_rate_limit: float = 1.0<br>
+                        """Passive HTTP Observer v9.3 - Comprehensive Security Analysis Tool (PRODUCTION READY)"""
+                    </div>
+                    <div class="evidence-explanation">
+                        In the class definition and header comments, the author explicitly declares passive scanning as core functionality.  
+                        The entire toolchain is architected around the principle of non-intrusive observation. The word "Passive" appears in the title,  
+                        plus the main execution prints `scan_mode = "Passive (HAR Analysis)"` etc. This is unambiguous evidence.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional cross-summary -->
+        <hr>
+        <div style="background: #010409; border-radius: 20px; padding: 1.5rem; margin-top: 1rem;">
+            <h3 style="display: flex; align-items: center; gap: 0.5rem;">⚡ Summary – Why this tool is truly passive</h3>
+            <ul style="margin-top: 1rem; list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 0.5rem;">✅ <strong>No active vulnerability probing</strong>: Never sends SQLi, XSS, or command injection payloads.</li>
+                <li style="margin-bottom: 0.5rem;">✅ <strong>Pre-fetched traffic support</strong>: PCAP, HAR, Burp XML are fully supported without live connections.</li>
+                <li style="margin-bottom: 0.5rem;">✅ <strong>Rate-limited GET requests only</strong>: All live scans are basic, non-intrusive HTTP GETs with delays.</li>
+                <li style="margin-bottom: 0.5rem;">✅ <strong>No active tampering</strong>: Does not alter cookies, headers, or parameters to force misbehavior.</li>
+                <li style="margin-bottom: 0.5rem;">✅ <strong>Only existing information</strong>: Detects JWT, graphql, credit cards, cache misconfigurations by examining what the server already sent.</li>
+                <li>🎯 <strong>Design matches OWASP passive recon</strong>: Follows best practices for passive traffic analysis and header review.</li>
+            </ul>
+            <div class="evidence-explanation" style="margin-top: 1rem; background: #2d1f2b;">
+                🔎 <strong>Conclusion:</strong> Every line of the HTTP observer contributes to a passive, read-only methodology. 
+                The codebase is devoid of active exploitation loops — instead it focuses on intelligent, non-invasive security analysis perfect for production environments.
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        Passive HTTP Observer v9.3 — Evidence Analysis Report • Generated by code forensic review • All findings based on source code lines<br>
+        Demonstrates that scanning is fully passive: only reads existing responses, never writes or attacks endpoints.
+    </div>
+</div>
+</body>
+</html>
