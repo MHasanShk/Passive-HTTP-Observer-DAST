@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passive HTTP Observer v9.3 – Vertical Workflow</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #f0f4fa 0%, #e9eef4 100%);
+            font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, 'Roboto', monospace;
+            padding: 2rem 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* main card container */
+        .workflow-card {
+            max-width: 1100px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(2px);
+            border-radius: 2.5rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
+            padding: 2rem 2rem 2rem 2rem;
+            transition: all 0.2s;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+        }
+
+        h1 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 1.7rem;
+            letter-spacing: -0.3px;
+            color: #0a2b3e;
+            margin-bottom: 0.2rem;
+        }
+
+        .sub {
+            color: #2c5a7a;
+            border-left: 3px solid #2c7da0;
+            padding-left: 1rem;
+            margin-top: 0.2rem;
+            margin-bottom: 2rem;
+            font-weight: 450;
+            font-size: 0.9rem;
+        }
+
+        /* vertical flow container */
+        .vertical-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+            position: relative;
+        }
+
+        /* each block in the vertical chain */
+        .flow-block {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .node {
+            background: white;
+            border-radius: 2rem;
+            padding: 1rem 1.8rem;
+            min-width: 260px;
+            max-width: 85%;
+            text-align: center;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s;
+            border: 1px solid #e2edf7;
+        }
+
+        .node:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 22px -10px rgba(0, 0, 0, 0.12);
+            border-color: #b9d0e4;
+        }
+
+        .node-icon {
+            font-size: 2rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .node-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #1f3a5f;
+            margin-bottom: 0.25rem;
+        }
+
+        .node-desc {
+            font-size: 0.7rem;
+            color: #5b6f8c;
+            font-family: monospace;
+            letter-spacing: 0.2px;
+        }
+
+        /* input group but vertically integrated: still a node but multiple items inside */
+        .input-multi {
+            background: #f2f6fc;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem 1.5rem;
+        }
+
+        .input-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 0.6rem;
+        }
+
+        .input-chip {
+            background: white;
+            border-radius: 2rem;
+            padding: 0.3rem 1rem;
+            font-weight: 500;
+            font-size: 0.75rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid #dce5ef;
+        }
+
+        /* down arrow style */
+        .down-arrow {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #2c7da0;
+            background: #ffffffcc;
+            width: 44px;
+            height: 44px;
+            border-radius: 60px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin: 0.2rem 0;
+        }
+
+        .arrow-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .analysis-node {
+            background: #ffffff;
+            border-top: 3px solid #3b82f6;
+        }
+
+        .report-node {
+            background: #ecfdf5;
+            border-bottom: 3px solid #10b981;
+        }
+
+        .badge {
+            background: #0f2c3f20;
+            border-radius: 40px;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #1f6392;
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        hr {
+            margin: 1rem 0 0.5rem;
+            border: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #b9d0e4, transparent);
+        }
+
+        .footer-note {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.74rem;
+            color: #4f6f8f;
+            background: #eef2f7;
+            padding: 0.7rem;
+            border-radius: 2rem;
+            font-family: monospace;
+        }
+
+        .step-badge {
+            font-size: 0.7rem;
+            background: #eef3fa;
+            border-radius: 20px;
+            display: inline-block;
+            padding: 0.1rem 0.7rem;
+            margin-bottom: 5px;
+            color: #2d6a8f;
+        }
+
+        @media (max-width: 650px) {
+            .workflow-card { padding: 1.5rem; }
+            .node { min-width: 220px; padding: 0.8rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="workflow-card">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+        <div>
+            <h1>
+                <span>🕵️‍♂️</span> Passive HTTP Observer<br><span style="font-size: 0.85rem; font-weight: normal;">v9.3 — Production ready workflow</span>
+            </h1>
+            <div class="sub">⬇️ 100% vertical pipeline · input → analysis → output</div>
+        </div>
+        <div class="badge" style="background:#1a344d20;">🧠 47+ vulnerability detection methods</div>
+    </div>
+
+    <div class="vertical-flow">
+        <!-- STEP 1: USER COMMAND LINE + INPUT FILES (grouped) -->
+        <div class="flow-block">
+            <div class="node input-multi">
+                <div class="node-icon">🧑‍💻</div>
+                <div class="node-title">User Command Line Interface</div>
+                <div class="node-desc">python observer.py &lt;input&gt; [--workers] [--rate-limit] [--passive-rate]</div>
+                <div class="input-items">
+                    <span class="input-chip">📄 Spider Hellhound JSON</span>
+                    <span class="input-chip">📡 HAR file</span>
+                    <span class="input-chip">🐝 Burp XML</span>
+                    <span class="input-chip">📦 PCAP / PCAPng</span>
+                </div>
+                <div class="step-badge" style="margin-top: 8px;">🔹 Stage 1: File selection & arguments</div>
+            </div>
+        </div>
+        
+        <!-- DOWN ARROW -->
+        <div class="arrow-wrapper">
+            <div class="down-arrow">⬇️</div>
+        </div>
+
+        <!-- STEP 2: PARSING + REASSEMBLY -->
+        <div class="flow-block">
+            <div class="node analysis-node">
+                <div class="node-icon">⚙️</div>
+                <div class="node-title">Intelligent Parsing & Reassembly</div>
+                <div class="node-desc">HAR / Burp XML / JSON extraction · PCAP streaming · TCP stream reassembly · HTTP/2 support</div>
+                <div class="step-badge">🔹 Stage 2: Transaction extraction</div>
+            </div>
+        </div>
+
+        <div class="arrow-wrapper">
+            <div class="down-arrow">⬇️</div>
+        </div>
+
+        <!-- STEP 3: RATE LIMITED PASSIVE SCANNING -->
+        <div class="flow-block">
+            <div class="node analysis-node">
+                <div class="node-icon">⏱️</div>
+                <div class="node-title">Rate‑Limited Passive Scanning</div>
+                <div class="node-desc">passive rate limit · concurrent workers · respects delay between requests</div>
+                <div class="step-badge">🔹 Stage 3: Controlled HTTP analysis</div>
+            </div>
+        </div>
+
+        <div class="arrow-wrapper">
+            <div class="down-arrow">⬇️</div>
+        </div>
+
+        <!-- STEP 4: CORE ANALYSIS ENGINE (47+ detection methods) -->
+        <div class="flow-block">
+            <div class="node analysis-node" style="background:#fefef7;">
+                <div class="node-icon">🔬</div>
+                <div class="node-title">Comprehensive Security Analysis</div>
+                <div class="node-desc"><strong>47+ vulnerability detection methods</strong> · Transport security · Cookies · Mixed content · CSP · CORS · Clickjacking · Error leakage · GraphQL introspection · JWT weaknesses · HTTP smuggling · Cache poisoning · SSRF reflections · Open redirect · OAuth misconfigurations · API version disclosure · HTTP/2 issues · JavaScript security · WebSocket analysis · Credit card detection (Luhn + context) · and more</div>
+                <div class="badge">✨ Advanced detection modules active</div>
+                <div class="step-badge">🔹 Stage 4: Multi‑vector security scanning</div>
+            </div>
+        </div>
+
+        <div class="arrow-wrapper">
+            <div class="down-arrow">⬇️</div>
+        </div>
+
+        <!-- STEP 5: CONTEXT VALIDATION + FALSE POSITIVE REDUCTION -->
+        <div class="flow-block">
+            <div class="node analysis-node">
+                <div class="node-icon">🧠</div>
+                <div class="node-title">Context Validation & FP Reduction</div>
+                <div class="node-desc">Luhn check · credit card context validation · stack trace correlation · whitelist patterns · dynamic false‑positive filtering</div>
+                <div class="step-badge">🔹 Stage 5: Refined findings</div>
+            </div>
+        </div>
+
+        <div class="arrow-wrapper">
+            <div class="down-arrow">⬇️</div>
+        </div>
+
+        <!-- STEP 6: DEDUPLICATION + SORTING -->
+        <div class="flow-block">
+            <div class="node" style="background:#fef9e3;">
+                <div class="node-icon">🔎</div>
+                <div class="node-title">Deduplication & Severity Sorting</div>
+                <div class="node-desc">unique findings · Critical → Info ordering · group by confidence</div>
+                <div class="step-badge">🔹 Stage 6: Prioritization</div>
+            </div>
+        </div>
+
+        <div class="arrow-wrapper">
+            <div class="down-arrow">⬇️</div>
+        </div>
+
+        <!-- STEP 7: TERMINAL OUTPUT (Live findings) -->
+        <div class="flow-block">
+            <div class="node report-node">
+                <div class="node-icon">🖥️</div>
+                <div class="node-title">Terminal Output (Live Report)</div>
+                <div class="node-desc">Color‑coded findings · severity breakdown · icons & indicators · impact & remediation · progress bar</div>
+                <div class="step-badge">🔹 Stage 7: Human‑readable console summary</div>
+            </div>
+        </div>
+
+        <div class="arrow-wrapper">
+            <div class="down-arrow">⬇️</div>
+        </div>
+
+        <!-- STEP 8: JSON REPORT GENERATION -->
+        <div class="flow-block">
+            <div class="node report-node" style="background:#e0f2e9;">
+                <div class="node-icon">📁</div>
+                <div class="node-title">JSON Export (structured report)</div>
+                <div class="node-desc">passive_security_report.json · includes metadata, CWE references, remediation, extracted data, raw samples</div>
+                <div class="step-badge">🔹 Stage 8: Machine‑readable output</div>
+            </div>
+        </div>
+
+        <div class="arrow-wrapper">
+            <div class="down-arrow">⬇️</div>
+        </div>
+
+        <!-- STEP 9: SCAN COMPLETE (summary) -->
+        <div class="flow-block">
+            <div class="node" style="background:#f1f5f9; border-left: 4px solid #2c7da0;">
+                <div class="node-icon">✅</div>
+                <div class="node-title">Scan Complete & Statistics</div>
+                <div class="node-desc">Total targets · total findings · error count · duration · severity distribution</div>
+                <div class="step-badge">🏁 Final stage</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- simple legend and additional note -->
+    <hr>
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-top: 0.8rem;">
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="background:#f2f6fc; border-radius: 30px; padding: 3px 12px;">📥 INPUT</span> → CLI + any format (JSON/HAR/XML/PCAP)</div>
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="background:#eef3fa; border-radius: 30px; padding: 3px 12px;">⚙️ ANALYSIS CORE</span> → 47+ detection modules</div>
+        <div style="display: flex; align-items: center; gap: 8px;"><span style="background:#ecfdf5; border-radius: 30px; padding: 3px 12px;">📤 OUTPUT</span> → terminal + JSON report</div>
+    </div>
+    <div class="footer-note">
+        🔽 <strong>Strictly vertical flow</strong> · Each step feeds into the next: user input → parsing & reassembly → rate‑limited passive scanning → advanced detection (47+ methods) → context validation → deduplication → terminal output → JSON report → statistics. All arrows point downward for clarity.
+    </div>
+</div>
+</body>
+</html>

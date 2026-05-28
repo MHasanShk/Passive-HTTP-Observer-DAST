@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passive HTTP Observer - Python Libraries Explained</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            background: #f5f7fb;
+            color: #1a2a3f;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Header / Hero */
+        .hero {
+            background: linear-gradient(135deg, #0b2b3f 0%, #0f3b4f 100%);
+            color: white;
+            padding: 2.5rem 2.5rem 2rem 2.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-badge {
+            background: rgba(255,255,255,0.18);
+            backdrop-filter: blur(4px);
+            padding: 0.25rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            font-family: monospace;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: #cbdbe6;
+            max-width: 85%;
+            margin-top: 8px;
+        }
+
+        /* meta info */
+        .meta-bar {
+            background: #f8fafc;
+            padding: 0.9rem 2rem;
+            border-bottom: 1px solid #e4e9f0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.85rem;
+            color: #2c4c6c;
+            font-weight: 500;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .meta-icon {
+            font-size: 1.1rem;
+        }
+
+        /* main content */
+        .content {
+            padding: 2.2rem 2.2rem 2.5rem 2.2rem;
+        }
+
+        .section-title {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #0b2b3f;
+            border-left: 5px solid #2c8f6e;
+            padding-left: 1rem;
+        }
+
+        .subsection-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin: 1.8rem 0 1rem 0;
+            color: #1e4a76;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .library-card {
+            background: #ffffff;
+            border: 1px solid #e9edf4;
+            border-radius: 20px;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+
+        .library-card:hover {
+            border-color: #cbdde9;
+            box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 1.1rem 1.5rem 0.4rem 1.5rem;
+            border-bottom: 1px dashed #edf2f7;
+        }
+
+        .lib-name {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-weight: 700;
+            font-size: 1.3rem;
+            background: #eef2ff;
+            padding: 0.15rem 0.7rem;
+            border-radius: 30px;
+            color: #134e8a;
+            letter-spacing: -0.2px;
+        }
+
+        .lib-badge {
+            background: #eef2f9;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            color: #2c5282;
+            font-weight: 500;
+        }
+
+        .card-body {
+            padding: 1rem 1.5rem 1.3rem 1.5rem;
+            color: #2d3e50;
+        }
+
+        .card-body p {
+            margin-bottom: 0.5rem;
+            line-height: 1.55;
+        }
+
+        .optional-note {
+            background: #fef9e6;
+            border-left: 3px solid #e6b422;
+            padding: 0.4rem 1rem;
+            margin-top: 0.75rem;
+            font-size: 0.85rem;
+            border-radius: 10px;
+            color: #7a5c00;
+        }
+
+        hr {
+            margin: 1.5rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, #e2e8f0, #cbd5e1, #e2e8f0);
+        }
+
+        footer {
+            background: #f9fbfd;
+            padding: 1.4rem 2rem;
+            border-top: 1px solid #e2edf2;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #4a627a;
+        }
+
+        @media (max-width: 750px) {
+            .hero p { max-width: 100%; }
+            .content { padding: 1.5rem; }
+            .lib-name { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="hero">
+        <h1>
+            📦 Passive HTTP Observer v9.3
+            <span class="hero-badge">Production ready · Security analysis</span>
+        </h1>
+        <p>Deep explanation of every Python library used in the tool — from core networking to packet dissection, JWT analysis, concurrency & reporting.</p>
+    </div>
+    <div class="meta-bar">
+        <div class="meta-item"><span class="meta-icon">🔍</span> 24+ libraries explained</div>
+        <div class="meta-item"><span class="meta-icon">🐍</span> Full coverage: standard lib + third-party</div>
+        <div class="meta-item"><span class="meta-icon">⚙️</span> Optional deps: JWT, HTTP/2, Scapy, jsbeautifier</div>
+    </div>
+    <div class="content">
+        <div class="section-title">Core Networking & Web Libraries</div>
+        <div class="card-grid">
+            <div class="library-card">
+                <div class="card-header"><span class="lib-name">requests</span><span class="lib-badge">HTTP client · session mgmt</span></div>
+                <div class="card-body"><p>Primary HTTP library for making requests, managing persistent sessions (<code>requests.Session()</code>), handling redirects, SSL/TLS verification with certifi, and capturing response objects (status, headers, body). Used extensively for passive scanning and fetching endpoints.</p></div>
+            </div>
+            <div class="library-card">
+                <div class="card-header"><span class="lib-name">urllib.parse</span><span class="lib-badge">URL parsing</span></div>
+                <div class="card-body"><p>Provides <code>urlparse</code>, <code>parse_qs</code>, <code>urljoin</code>, and <code>unquote</code> to break down URLs, extract query parameters, rebuild absolute paths, and decode percent-encoded characters. Essential for detecting sensitive data in URL parameters and analyzing redirects.</p></div>
+            </div>
+        </div>
+
+        <div class="section-title">Data Processing & Pattern Matching</div>
+        <div class="card-grid">
+            <div class="library-card"><div class="card-header"><span class="lib-name">re</span><span class="lib-badge">regular expressions</span></div><div class="card-body"><p>Powers almost every detection module: credit card patterns, JWT token extraction, stack traces (Python/Java/PHP), database errors, GraphQL introspection, internal IP addresses, open redirect parameters, CSP weaknesses, and mixed content scanning.</p></div></div>
+            <div class="library-card"><div class="card-header"><span class="lib-name">json</span><span class="lib-badge">serialization · HAR parsing</span></div><div class="card-body"><p>Processes HAR (HTTP Archive) files, loads JSON configuration, analyzes GraphQL responses, decodes JWT payloads, and generates final security reports with all findings organized by severity and category.</p></div></div>
+            <div class="library-card"><div class="card-header"><span class="lib-name">xml.etree.ElementTree</span><span class="lib-badge">XML parsing (Burp Suite)</span></div><div class="card-body"><p>Parses Burp Suite XML exports. Traverses the document tree to extract base64-encoded requests/responses, status codes, headers, and reconstructs HTTP transactions from penetration testing sessions.</p></div></div>
+        </div>
+
+        <div class="section-title">Cryptography & Token Security</div>
+        <div class="card-grid">
+            <div class="library-card"><div class="card-header"><span class="lib-name">base64</span><span class="lib-badge">decoding</span></div><div class="card-body"><p>Decodes base64 content from JWT tokens (three base64url parts), Burp XML response data, and HAR file content. Reveals plaintext for security analysis such as sensitive claims or leaked credentials.</p></div></div>
+            <div class="library-card"><div class="card-header"><span class="lib-name">certifi</span><span class="lib-badge">trusted CA bundle</span></div><div class="card-body"><p>Provides Mozilla’s curated certificate authority bundle. The HTTP session uses it to validate SSL/TLS certificates, ensuring secure connections without trusting invalid or self-signed certs.</p></div></div>
+            <div class="library-card"><div class="card-header"><span class="lib-name">jwt</span><span class="lib-badge">PyJWT · optional</span></div><div class="card-body"><p>Optional but powerful: decodes JWT headers and payloads, verifies signatures, extracts expiration claims, detects algorithm confusion (e.g., 'none' alg) and missing exp claims. Falls back gracefully if absent.</p><div class="optional-note">✨ Optional import — if available, enables advanced JWT weakness detection.</div></div></div>
+        </div>
+
+        <div class="section-title">HTTP/2 & Packet Analysis (advanced/optional)</div>
+        <div class="card-grid">
+            <div class="library-card"><div class="card-header"><span class="lib-name">h2 (hyper-h2)</span><span class="lib-badge">HTTP/2 protocol</span></div><div class="card-body"><p>Implements HTTP/2 framing and stream handling. Used when processing PCAP files: decodes connection preface, reassembles streams, extracts headers and response bodies from multiplexed HTTP/2 traffic. Optional, enabled via <code>H2_AVAILABLE</code> flag.</p><div class="optional-note">⚡ HTTP/2 support requires <code>h2</code> library.</div></div></div>
+            <div class="library-card"><div class="card-header"><span class="lib-name">scapy</span><span class="lib-badge">packet manipulation</span></div><div class="card-body"><p>Powers PCAP processing: imports <code>TCP</code>, <code>Raw</code>, <code>IP</code>, and <code>PcapReader</code>. Reassembles TCP streams from packets, respects sequence numbers, extracts HTTP messages, and handles PCAP streaming to avoid memory overload. Optional but critical for network capture analysis.</p><div class="optional-note">📡 Requires <code>scapy</code> — if missing, PCAP mode is disabled.</div></div></div>
+            <div class="library-card"><div class="card-header"><span class="lib-name">jsbeautifier</span><span class="lib-badge">JS formatting</span></div><div class="card-body"><p>Optionally beautifies minified JavaScript before analysis, making dangerous patterns (<code>eval()</code>, <code>innerHTML</code>, <code>postMessage</code> wildcards) easier to detect. Increases accuracy of client-side security scans.</p></div></div>
+        </div>
+
+        <div class="section-title">System, Concurrency & Utilities</div>
+        <div class="card-grid">
+            <div class="library-card"><div class="card-header"><span class="lib-name">argparse</span><span class="lib-badge">CLI interface</span></div><div class="card-body"><p>Parses command-line arguments: input file path, number of workers, rate limit, timeout, max PCAP size, passive scan rate, and verbosity. Provides user control over analysis parameters.</p></div></div>
+            <div class="library-card"><div class="card-header"><span class="lib-name">datetime / timezone / timedelta</span><span class="lib-badge">timestamps & durations</span></div><div class="card-body"><p>Handles UTC timestamps for findings, JWT expiration checks, elapsed scan time, and caching staleness. <code>timedelta</code> calculates token validity and measures request latencies.</p></div></div>
+            <div class="library-card"><div class="card-header"><span class="lib-name">uuid</span><span class="lib-badge">unique identifiers</span></div><div class="card-body"><p>Generates per-finding UUIDs for JSON reports, enabling deduplication and traceability across different endpoints.</p></div></div>
+            <div class="library-card"><div class="card-header"><span class="lib-name">time</span><span class="lib-badge">sleep · rate limiting</span></div><div class="card-body"><p>Implements passive rate limiting (<code>time.sleep</code>), measures request intervals, tracks last-seen timestamps for TCP stream garbage collection, and profiles total execution duration.</p></div></div>
+            <div class="library-card"><div class="card-header"><span class="lib-name">collections.defaultdict</span><span class="lib-badge">auto-initialized dicts</span></div><div class="card-body"><p>Simplifies severity statistics, category counts, and aggregation maps without manual key checks. Makes summary generation concise and bug-free.</p></div></div>
+            <div class="library-card"><div class="card-header"><span class="lib-name">typing</span><span class="lib-badge">type hints</span></div><div class="card-body"><p>Imports <code>List, Dict, Set, Optional, Tuple, Any, Union</code> for robust code documentation and static analysis. Used throughout dataclasses and function signatures.</p></div></div>
+            <div class="library-card"><div class="card-header"><span class="lib-name">enum.Enum</span><span class="lib-badge">severity & confidence</span></div><div class="card-body"><p>Defines type-safe enumerations for <code>Severity</code> (Critical, High, Medium, Low, Info) and <code>Confidence</code> (High, Medium, Low), preventing string-based errors and enabling consistent sorting.</p></div></div>
+        </div>
+
+        <div class="section-title">File I/O & Path Management</div>
+        <div class="card-grid">
+            <div class="library-card"><div class="card-header"><span class="lib-name">pathlib.Path</span><span class="lib-badge">modern filesystem</span></div><div class="card-body"><p>Object-oriented path handling: extracts file extensions, checks sizes (PCAP max MB limit), validates existence, and builds output report paths.</p></div></div>
+        </div>
+
+        <div class="section-title">Logging, Garbage Collection & Thread Safety</div>
+        <div class="card-grid">
+            <div class="library-card"><div class="card-header"><span class="lib-name">logging</span><span class="lib-badge">diagnostics</span></div><div class="card-body"><p>Structured logging with levels (DEBUG, INFO, ERROR). Reports PCAP parsing steps, HTTP/2 errors, and verbose processing details when <code>--verbose</code> is enabled.</p></div></div>
+            <div class="library-card"><div class="card-header"><span class="lib-name">gc</span><span class="lib-badge">garbage collection</span></div><div class="card-body"><p>Explicitly triggers garbage collection every N requests (default 500) to prevent memory bloat, especially crucial when scanning thousands of URLs or processing large PCAP streams.</p></div></div>
+            <div class="library-card"><div class="card-header"><span class="lib-name">threading.Lock / Semaphore</span><span class="lib-badge">concurrency primitives</span></div><div class="card-body"><p><code>Lock</code> guarantees thread-safe console output in <code>PrintManager</code>. <code>Semaphore</code> coordinates passive rate limiting across worker threads, preventing burst overloading of target servers.</p></div></div>
+            <div class="library-card"><div class="card-header"><span class="lib-name">concurrent.futures (ThreadPoolExecutor, as_completed)</span><span class="lib-badge">worker pool</span></div><div class="card-body"><p>High-level thread pool management: submits analysis tasks for each URL or HTTP transaction, collects results as they complete, handles exceptions per task, and respects <code>max_workers</code> limit.</p></div></div>
+        </div>
+
+        <div class="section-title">HTTP Utilities & Cookie Parsing</div>
+        <div class="card-grid">
+            <div class="library-card"><div class="card-header"><span class="lib-name">http.cookies.SimpleCookie</span><span class="lib-badge">RFC 6265 cookie parser</span></div><div class="card-body"><p>Robustly parses raw <code>Set-Cookie</code> headers to extract attributes: Secure, HttpOnly, SameSite, Domain, Path, Max-Age, and Expires. Handles malformed headers and edge cases.</p></div></div>
+        </div>
+
+        <div class="section-title">Supporting Data Structures</div>
+        <div class="card-grid">
+            <div class="library-card"><div class="card-header"><span class="lib-name">dataclasses.dataclass</span><span class="lib-badge">clean data containers</span></div><div class="card-body"><p>Automatically generates <code>__init__</code>, <code>__repr__</code>, and comparison methods for <code>SecurityFinding</code> and <code>ObserverConfig</code>. Reduces boilerplate while keeping logic clear and maintainable.</p></div></div>
+        </div>
+
+        <hr />
+
+        <div style="background: #f0f6fa; border-radius: 20px; padding: 1.5rem; margin-top: 1rem;">
+            <p style="font-weight: 600; margin-bottom: 0.5rem;">🔎 Summary of detection capabilities powered by these libraries:</p>
+            <ul style="margin-left: 1.2rem; color: #1f3b4c;">
+                <li><strong>requests + certifi</strong> – passive HTTPS scanning, security header validation.</li>
+                <li><strong>re + json + xml</strong> – Info leaks (stack traces, DB errors), GraphQL introspection, JWT extraction.</li>
+                <li><strong>scapy + h2</strong> – PCAP reassembly, HTTP smuggling detection, HTTP/2 analysis.</li>
+                <li><strong>jwt + base64</strong> – Token weaknesses, missing expiration, sensitive payload fields.</li>
+                <li><strong>jsbeautifier</strong> – JavaScript security (eval, innerHTML, postMessage wildcard).</li>
+                <li><strong>concurrent.futures + threading</strong> – High-performance multi-endpoint analysis.</li>
+            </ul>
+            <p class="optional-note" style="margin-top: 1rem; background: #e6f4ea; border-left-color: #2b6e3c;">✅ All optional imports (JWT, h2, scapy, jsbeautifier) are wrapped with fallback logic, ensuring core functionality works even if advanced libraries are missing.</p>
+        </div>
+        <footer>
+            ⚡ Passive HTTP Observer v9.3 — Production-ready security analysis · Complete library transparency · <span style="font-family: monospace;">HAR | Burp XML | PCAP | JSON URL</span> support
+        </footer>
+    </div>
+</div>
+</body>
+</html>
